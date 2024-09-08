@@ -9,45 +9,67 @@
 <body>
     <div class="container">
         <header>
-            <h1>Rabi Hassan</h1>
-            <p>rabihassanshaikh3@gmail.com | Phone: 03131289017</p>
+            <h1 id="display-name">Rabi Hassan</h1>
+            <p id="display-contact">rabihassanshaikh3@gmail.com | Phone: 03131289017</p>
         </header>
 
         <section id="personal-info">
             <h2>Personal Information</h2>
-            <img src="profile-picture.png" alt="Profile Picture">
+            <img id="profile-pic" src="profile-picture.png" alt="Profile Picture">
         </section>
 
         <section id="education">
             <h2>Education</h2>
-            <ul>
+            <ul id="display-education">
                 <li>Intermediate from science (Pre engineering)</li>
-                <li>Bachlor's degree in BBA (continue)</li>
+                <li>Bachelor's degree in BBA (continue)</li>
             </ul>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <ul>
+            <ul id="display-skills">
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>TypeScript</li>
-                <li>react</li>
-                <li>next.js</li>
-                <li>MYSQL</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>MySQL</li>
             </ul>
         </section>
 
         <section id="work-experience">
             <h2>Work Experience</h2>
-            <ul>
+            <ul id="display-work">
                 <li>(Next.JS) Internship at Systems Limited</li>
             </ul>
         </section>
 
-        <button id="toggle-skills">Skills</button>
-    </div>
+        <!-- Form for Dynamic Input -->
+        <section id="resume-form">
+            <h2>Update Your Resume</h2>
+            <form id="update-resume-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
 
-    <script src="resume.js"></script>
+                <label for="contact">Email and Phone:</label>
+                <input type="text" id="contact" placeholder="Enter your email and phone number">
+
+                <label for="education-input">Education:</label>
+                <!-- Changed id to 'education-input' to avoid conflict -->
+                <input type="text" id="education-input" placeholder="Enter your education details">
+
+                <label for="skills">Skills (comma separated):</label>
+                <input type="text" id="skills" placeholder="Enter your skills">
+
+                <label for="work">Work Experience:</label>
+                <input type="text" id="work" placeholder="Enter your work experience">
+                
+                <button type="button" id="update-resume">Update Resume</button>
+            </form>
+        </section>
+
+        <script src="resume.js"></script>
+    </div>
 </body>
 </html>
